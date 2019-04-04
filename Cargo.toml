@@ -1,0 +1,10 @@
+[package]
+name = "wasi-example"
+version = "0.1.0"
+description = "A tool for executing HQ9+ source code to demo WASI"
+authors = ["The Wasmer Engineering Team <engineering@wasmer.io>"]
+repository = "https://github.com/wasmerio/rust-wasi-example"
+edition = "2018"
+
+[dependencies]
+structopt = "0.2"
