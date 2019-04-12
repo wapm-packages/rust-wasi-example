@@ -4,6 +4,13 @@ A toy program implementing [HQ9+][3] to demo compiling Rust to [WASI][1] and run
 
 ## Setting up
 
+First, let's clone this repo:
+
+```shell
+git clone https://github.com/wasmerio/rust-wasi-example.git
+cd rust-wasi-example
+```
+
 Ensure you have an up to date version of Rust nightly and run:
 
 ```shell
