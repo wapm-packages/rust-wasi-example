@@ -31,7 +31,7 @@ cp target/wasm32-unknown-wasi/debug/wasi-example.wasm .
 curl https://get.wasmer.io -sSfL | sh
 
 # Run the WebAsseembly file with Wasmer!
-wasmer run rust-wasi-example/wasi-example.wasm -- -e "HQ9+"
+wasmer run wasi-example.wasm -- -e "HQ9+"
 ```
 
 [1]: https://hacks.mozilla.org/2019/03/standardizing-wasi-a-webassembly-system-interface/
