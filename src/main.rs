@@ -1,3 +1,5 @@
+use std::fs;
+use std::io::Read;
 use structopt::StructOpt;
 
 #[derive(Debug, StructOpt)]
@@ -5,6 +7,9 @@ struct Opt {
     /// Evaluate HQ9+ source code
     #[structopt(short = "e", long = "eval")]
     source_code: Option<String>,
+    /// Evaluate HQ9+ source code from a file
+    #[structopt(short = "f", long = "file")]
+    source_file: Option<String>,
     /// Force evaluation of the `H` instruction
     #[structopt(short = "h", long = "hello-world")]
     hello_world: bool,
@@ -53,8 +58,19 @@ fn main() {
 
     if let Some(src) = opt.source_code {
         run(src);
+    }
+    if let Some(src_file) = opt.source_file {
+        let mut src_file_handle =
+            fs::File::open(&src_file).expect(&format!("Could not open file: {}", &src_file));
+        let mut buf = String::new();
+        src_file_handle
+            .read_to_string(&mut buf)
+            .expect(&format!("Failed to read data from file: {}", &src_file));
+        run(buf);
     } else {
-        eprintln!("Error: please pass HQ9+ source code via the `-e` flag");
+        eprintln!(
+            "Error: please pass HQ9+ source code via the `-e` flag or as a file via the `-f` flag"
+        );
         ::std::process::exit(-1);
     }
 }

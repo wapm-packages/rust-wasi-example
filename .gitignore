@@ -10,3 +10,4 @@ Cargo.lock
 **/*.rs.bk
 
 wasi-example.wasm
+wapm.lock

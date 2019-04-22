@@ -1,0 +1,14 @@
+[package]
+name = "YOUR-USERNAME/rust-example"
+version = "0.1.0"
+description = "A tool for running HQ9+ source code"
+readme = "README.md"
+
+[[module]]
+name = "wasi-example"
+source = "target/wasm32-unknown-wasi/release/wasi-example.wasm"
+abi = "wasi"
+
+[[command]]
+name = "hq9+"
+module = "wasi-example"
