@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "A tool for running HQ9+ source code"
 readme = "README.md"
 repository = "https://github.com/wapm-packages/rust-wasi-example"
+license = "MIT"
 
 [[module]]
 name = "wasi-example"
