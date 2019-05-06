@@ -58,6 +58,7 @@ fn main() {
 
     if let Some(src) = opt.source_code {
         run(src);
+        return;
     }
     if let Some(src_file) = opt.source_file {
         let mut src_file_handle =
