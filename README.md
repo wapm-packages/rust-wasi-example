@@ -14,13 +14,13 @@ cd rust-wasi-example
 Ensure you have an up to date version of Rust nightly and run:
 
 ```shell
-rustup target add wasm32-unknown-wasi --toolchain nightly
+rustup target add wasm32-wasi --toolchain nightly
 ```
 
 ## Building
 
 ```shell
-cargo +nightly build --target=wasm32-unknown-wasi --release
+cargo +nightly build --target=wasm32-wasi --release
 cp target/wasm32-unknown-wasi/release/wasi-example.wasm .
 ```
 
