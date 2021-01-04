@@ -21,7 +21,7 @@ rustup target add wasm32-wasi --toolchain nightly
 
 ```shell
 cargo +nightly build --target=wasm32-wasi --release
-cp target/wasm32-unknown-wasi/release/wasi-example.wasm .
+cp target/wasm32-wasi/release/wasi-example.wasm .
 ```
 
 ## Running
