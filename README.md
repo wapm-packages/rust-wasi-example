@@ -13,7 +13,7 @@ git clone https://github.com/wasmerio/rust-wasi-example.git
 cd rust-wasi-example
 ```
 
-Ensure you have an up to date version of Rust nightly and run:
+Ensure you have an up to date version of Rust and run:
 
 ```shell
 rustup target add wasm32-wasi
@@ -22,7 +22,7 @@ rustup target add wasm32-wasi
 ## Building
 
 ```shell
-cargo +nightly build --target=wasm32-wasi --release
+cargo build --target=wasm32-wasi --release
 cp target/wasm32-unknown-wasi/release/wasi-example.wasm .
 ```
 
