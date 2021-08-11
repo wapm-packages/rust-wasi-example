@@ -4,6 +4,8 @@ A toy program implementing [HQ9+][3] to demo compiling Rust to [WASI][1] and run
 
 ## Setting up
 
+You will need the Rust toolchain installed.
+
 First, let's clone the repo:
 
 ```shell
@@ -14,7 +16,7 @@ cd rust-wasi-example
 Ensure you have an up to date version of Rust nightly and run:
 
 ```shell
-rustup target add wasm32-wasi --toolchain nightly
+rustup target add wasm32-wasi
 ```
 
 ## Building
